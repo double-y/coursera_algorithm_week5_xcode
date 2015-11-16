@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5FC512FD1BF7BC4800DF29D7"
-               BuildableName = "coursera_week5"
-               BlueprintName = "coursera_week5"
+               BlueprintIdentifier = "5F22E77A1BF94F680094BF5D"
+               BuildableName = "test_project"
+               BlueprintName = "test_project"
                ReferencedContainer = "container:coursera_week5.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "NO"
+      useCustomWorkingDirectory = "YES"
+      customWorkingDirectory = "/Users/yasudayousuke/Documents/study/coursera/algorism/programming_question/week5/xcode/coursera_week5/test_project"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -74,9 +75,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5FC512FD1BF7BC4800DF29D7"
-            BuildableName = "coursera_week5"
-            BlueprintName = "coursera_week5"
+            BlueprintIdentifier = "5F22E77A1BF94F680094BF5D"
+            BuildableName = "test_project"
+            BlueprintName = "test_project"
             ReferencedContainer = "container:coursera_week5.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

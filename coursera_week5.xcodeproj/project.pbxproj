@@ -7,10 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5FC513021BF7BC4800DF29D7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC513011BF7BC4800DF29D7 /* main.cpp */; };
+		5F22E77E1BF94F680094BF5D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F22E77D1BF94F680094BF5D /* main.cpp */; };
+		5F22E7861BF9609B0094BF5D /* dikstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC513011BF7BC4800DF29D7 /* dikstra.cpp */; };
+		5F22E7871BF965C10094BF5D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F22E77D1BF94F680094BF5D /* main.cpp */; };
+		5FC513021BF7BC4800DF29D7 /* dikstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC513011BF7BC4800DF29D7 /* dikstra.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5F22E7791BF94F680094BF5D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		5FC512FC1BF7BC4800DF29D7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -23,11 +35,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F22E77B1BF94F680094BF5D /* test_project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_project; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F22E77D1BF94F680094BF5D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5F22E7821BF94FA30094BF5D /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
+		5F22E7831BF950280094BF5D /* dijkstraData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dijkstraData.txt; sourceTree = "<group>"; };
+		5F22E7841BF95DE80094BF5D /* test1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test1.txt; sourceTree = "<group>"; };
+		5F22E7851BF960030094BF5D /* dikstra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dikstra.h; sourceTree = "<group>"; };
 		5FC512FE1BF7BC4800DF29D7 /* coursera_week5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = coursera_week5; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FC513011BF7BC4800DF29D7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5FC513011BF7BC4800DF29D7 /* dikstra.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dikstra.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5F22E7781BF94F680094BF5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5FC512FB1BF7BC4800DF29D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +63,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F22E77C1BF94F680094BF5D /* test_project */ = {
+			isa = PBXGroup;
+			children = (
+				5F22E77D1BF94F680094BF5D /* main.cpp */,
+				5F22E7821BF94FA30094BF5D /* catch.hpp */,
+				5F22E7841BF95DE80094BF5D /* test1.txt */,
+			);
+			path = test_project;
+			sourceTree = "<group>";
+		};
 		5FC512F51BF7BC4800DF29D7 = {
 			isa = PBXGroup;
 			children = (
 				5FC513001BF7BC4800DF29D7 /* coursera_week5 */,
+				5F22E77C1BF94F680094BF5D /* test_project */,
 				5FC512FF1BF7BC4800DF29D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				5FC512FE1BF7BC4800DF29D7 /* coursera_week5 */,
+				5F22E77B1BF94F680094BF5D /* test_project */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,7 +94,9 @@
 		5FC513001BF7BC4800DF29D7 /* coursera_week5 */ = {
 			isa = PBXGroup;
 			children = (
-				5FC513011BF7BC4800DF29D7 /* main.cpp */,
+				5FC513011BF7BC4800DF29D7 /* dikstra.cpp */,
+				5F22E7851BF960030094BF5D /* dikstra.h */,
+				5F22E7831BF950280094BF5D /* dijkstraData.txt */,
 			);
 			path = coursera_week5;
 			sourceTree = "<group>";
@@ -65,6 +104,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5F22E77A1BF94F680094BF5D /* test_project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F22E7811BF94F680094BF5D /* Build configuration list for PBXNativeTarget "test_project" */;
+			buildPhases = (
+				5F22E7771BF94F680094BF5D /* Sources */,
+				5F22E7781BF94F680094BF5D /* Frameworks */,
+				5F22E7791BF94F680094BF5D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test_project;
+			productName = test_project;
+			productReference = 5F22E77B1BF94F680094BF5D /* test_project */;
+			productType = "com.apple.product-type.tool";
+		};
 		5FC512FD1BF7BC4800DF29D7 /* coursera_week5 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FC513051BF7BC4800DF29D7 /* Build configuration list for PBXNativeTarget "coursera_week5" */;
@@ -91,6 +147,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "安田洋介";
 				TargetAttributes = {
+					5F22E77A1BF94F680094BF5D = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					5FC512FD1BF7BC4800DF29D7 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
@@ -109,22 +168,48 @@
 			projectRoot = "";
 			targets = (
 				5FC512FD1BF7BC4800DF29D7 /* coursera_week5 */,
+				5F22E77A1BF94F680094BF5D /* test_project */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5F22E7771BF94F680094BF5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F22E7861BF9609B0094BF5D /* dikstra.cpp in Sources */,
+				5F22E77E1BF94F680094BF5D /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5FC512FA1BF7BC4800DF29D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FC513021BF7BC4800DF29D7 /* main.cpp in Sources */,
+				5F22E7871BF965C10094BF5D /* main.cpp in Sources */,
+				5FC513021BF7BC4800DF29D7 /* dikstra.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5F22E77F1BF94F680094BF5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = .;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5F22E7801BF94F680094BF5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5FC513031BF7BC4800DF29D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -221,6 +306,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5F22E7811BF94F680094BF5D /* Build configuration list for PBXNativeTarget "test_project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F22E77F1BF94F680094BF5D /* Debug */,
+				5F22E7801BF94F680094BF5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		5FC512F91BF7BC4800DF29D7 /* Build configuration list for PBXProject "coursera_week5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -237,6 +330,7 @@
 				5FC513071BF7BC4800DF29D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
