@@ -10,42 +10,48 @@
 
 using namespace std;
 
+class comparator //Determines priority for priority queue (shortest edge comes first)
+{
+public:
+    bool operator()(pair<int,int> &a1, pair<int,int> &a2)
+    {
+        return a1.second>a2.second; //sorting on basis of edge weights
+    }
+};
+
 vector<int> dikstra(set<int> node_set, vector<vector<pair<int, int> > > edges){
     vector<int> distances (node_set.size(), 1000000);
+    priority_queue<int, vector<pair<int, int> >, comparator > min_heap;
+    
     distances[0] = 0;
-    queue<int> node_queue;
-    node_queue.push(*node_set.begin());
-    node_set.erase(node_set.begin());
-    while(!node_set.empty()){
-        queue<int> new_queue;
-        while(!node_queue.empty()){
-            int from_node = node_queue.front();
-            node_queue.pop();
-            int current_distance = distances[from_node];
-            for(int i=0; i<edges[from_node].size(); i++){
-                pair<int, int> next_edge = edges[from_node][i];
-                set<int>::iterator it = node_set.find(next_edge.first);
-                if(it == node_set.end()){
-                    continue;
-                }else{
-                    new_queue.push(next_edge.first);
-                }
-                if(distances[next_edge.first] > current_distance+next_edge.second){
-                    distances[next_edge.first] = current_distance+next_edge.second;
-                }
-            }
-            int min_distance = 1000000;
-            int min_distance_node = edges.size();
-            for(int i =0; i<distances.size(); i++){
-                set<int>::iterator it = node_set.find(i);
-                if(it != node_set.end() && distances[i] < min_distance){
-                    min_distance=distances[i];
-                    min_distance_node=i;
-                }
-            }
-            node_set.erase(node_set.find(min_distance_node));
+    pair<int, int> first_pair (0, 0);
+    min_heap.push(first_pair);
+
+    while(node_set.size() != 0){
+        
+        pair<int, int> from = min_heap.top();
+        min_heap.pop();
+        int from_node = from.first;
+        int distance = from.second;
+        
+        set<int>::iterator it = node_set.find(from_node);
+        if(it==node_set.end()){
+            continue;
+        }else{
+            node_set.erase(node_set.find(from_node));
         }
-        node_queue = new_queue;
+        
+        for(int i=0; i<edges[from_node].size(); i++){
+            int target_node = edges[from_node][i].first;
+            int length = edges[from_node][i].second;
+            set<int>::iterator it = node_set.find(target_node);
+            if(it!=node_set.end() && distances[target_node] > distance + length){
+                distances[target_node] = distance + length;
+                pair<int, int> new_pair (target_node, distance+length);
+                min_heap.push(new_pair);
+            }
+        }
+
     }
     return distances;
 }
@@ -55,7 +61,6 @@ vector<int> exec_dikstra(string file_name){
     string line;
     int node_count = 0;;
     while (getline(inFile, line)){
-        cout << line << endl;
         istringstream iss(line);
         int from;
         iss >> from;
@@ -64,7 +69,6 @@ vector<int> exec_dikstra(string file_name){
         }
         string edge_data;
         while(iss >> edge_data){
-            cout << edge_data << endl;
             stringstream lineStream(edge_data);
             string to_string;
             getline(lineStream, to_string, ',');
@@ -80,13 +84,11 @@ vector<int> exec_dikstra(string file_name){
 
     ifstream secFile(file_name);
     while (getline(secFile, line)){
-        cout << line << endl;
         istringstream iss(line);
         int from;
         iss >> from;
         string edge_data;
         while(iss >> edge_data){
-            cout << edge_data << endl;
             stringstream lineStream(edge_data);
             string to_string;
             string distance_string;
